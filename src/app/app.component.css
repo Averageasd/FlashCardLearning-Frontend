@@ -1,6 +1,9 @@
 .virtual-scroll-viewport {
-  height: 300px;
-  width: 100%;
-  border: 1px solid #ccc;
+  height: 100%;
   overflow: auto;
+}
+
+.flashcard-display {
+  padding:1.5rem;
+  border: 1px solid #ccc;
 }

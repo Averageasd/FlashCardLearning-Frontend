@@ -1,13 +1,40 @@
 
 <header>
-  <h2>Flash Card Learning</h2>
+  <h2 class="mat-headline-2">Flash Card Learning</h2>
 </header>
-<main>
-  <div>
-    <cdk-virtual-scroll-viewport [itemSize]="50" #flashcardVirtualList class="virtual-scroll-viewport" style="height: 400px" (scrolledIndexChange)="onScroll($event)">
-      <div *cdkVirtualFor="let item of flashCards; trackBy:trackByFn" style="height: 50px; border: 1px solid #ccc;">
-        {{ item.name }}
-      </div>
-    </cdk-virtual-scroll-viewport>
-  </div>
+<main class="container">
+  <ul class="virtual-scroll-viewport">
+    <ng-container *ngFor="let card of flashCards; let i = index; let first = first; let last = last">
+      <li *ngIf="!last" class="flashcard-display">
+        <p>
+          {{card.name}}
+        </p>
+        <p>
+          {{card.name}}
+        </p>
+        <p>
+          {{card.name}}
+        </p>
+        <p>
+          {{card.name}}
+        </p>
+        
+      </li>
+      <li *ngIf="last" #targetObserver class="flashcard-display">
+        <p>
+          {{card.name}}
+        </p>
+        <p>
+          {{card.name}}
+        </p>
+        <p>
+          {{card.name}}
+        </p>
+        <p>
+          {{card.name}}
+        </p>
+      </li>
+    </ng-container>
+    
+  </ul>
 </main>
