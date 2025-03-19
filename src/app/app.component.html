@@ -4,6 +4,10 @@
 </header>
 <main>
   <div>
-    
+    <cdk-virtual-scroll-viewport [itemSize]="50" #flashcardVirtualList class="virtual-scroll-viewport" style="height: 400px" (scrolledIndexChange)="onScroll($event)">
+      <div *cdkVirtualFor="let item of flashCards; trackBy:trackByFn" style="height: 50px; border: 1px solid #ccc;">
+        {{ item.name }}
+      </div>
+    </cdk-virtual-scroll-viewport>
   </div>
 </main>
