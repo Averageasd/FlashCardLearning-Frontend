@@ -31,9 +31,7 @@ export class AppComponent implements OnInit, AfterViewChecked{
   observer: IntersectionObserver = new IntersectionObserver(this.handleObserver.bind(this), this.options);
   constructor(private http: HttpClient){}
   ngAfterViewChecked(): void {
-    console.log('observe', this.targetObserver?.nativeElement);
     if (this.targetObserver) {
-      
       this.observer.observe(this.targetObserver?.nativeElement);
     }
   } 
