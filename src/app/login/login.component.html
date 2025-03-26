@@ -14,5 +14,8 @@
             </div>
             <button type="submit" [disabled]="!loginForm.valid">Log in</button>
        </form>
+       <div *ngIf="this.invalidLogin">
+            <p>Wrong username or password.</p>
+       </div>
     </div>
 </main>
