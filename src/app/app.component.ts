@@ -1,13 +1,12 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {CdkVirtualScrollViewport, ScrollingModule} from '@angular/cdk/scrolling';
+import { AfterViewChecked, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ScrollingModule} from '@angular/cdk/scrolling';
 import { MatCardModule } from '@angular/material/card'; 
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ScrollingModule, MatCardModule, CommonModule],
+  imports: [ScrollingModule, MatCardModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

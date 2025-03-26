@@ -1,1 +1,18 @@
-<p>login works!</p>
+<header>
+    <h2>Login form</h2>
+</header>
+<main>
+    <div>
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <div>
+               <label for="username">User name</label>
+               <input id="username" type="text" minlength="5" placeholder="username" name="username" [(ngModel)]="credentials.username" required> 
+            </div>
+            <div>
+               <label for="password">Password</label>
+               <input id="password" type="password" minlength="8" placeholder="password" name="password" [(ngModel)]="credentials.password" required> 
+            </div>
+            <button type="submit" [disabled]="!loginForm.valid">Log in</button>
+       </form>
+    </div>
+</main>
